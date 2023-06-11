@@ -2,6 +2,6 @@
   { "src": "/logos/CSS3_logo.png", "alt": "CSS Logo" },
   { "src": "/logos/html5_logo.png", "alt": "HTML Logo" },
   { "src": "/logos/JavaScript_logo.png", "alt": "JavaScript Logo" },
-  { "src": "/logos/Tailwind_Logo.png", "alt": "Tailwind Logo" },
+  { "src": "/logos/astro.png", "alt": "Astro Logo" },
   { "src": "/logos/React-icon.png", "alt": "React Logo" }
 ]

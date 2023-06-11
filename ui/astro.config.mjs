@@ -9,5 +9,5 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), sitemap(), prefetch(), robotsTxt(), image()]
+  integrations: [tailwind(), react(), sitemap(), prefetch(), robotsTxt(), image({serviceEntryPoint: '@astrojs/image/sharp'})]
 });
