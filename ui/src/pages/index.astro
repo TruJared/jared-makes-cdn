@@ -1,12 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HomeHeader from '../components/HomeHeader.astro';
+import FeaturedProjects from '../components/FeaturedProjects.astro';
+import FeaturedBlogPosts from '../components/FeaturedBlogPosts.astro';
 import logos from "../data/logos.json";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 	<HomeHeader heading="Jared Makes" intro="MAccusantium lectus consectetuer pede aut tempus! Pulvinar nihil aut ipsa nam, mollis! Suspendisse dapibus? Volutpat iste! Integer suscipit placerat orci ducimus, doloribus facilis laoreet. Ipsam egestas! Asperiores similique tortor nascetur! Accusantium curabitur accusamus aliqua duis? Irure." logos={logos} />
+	<FeaturedProjects />
+	<FeaturedBlogPosts />
 
 	</main>
 </Layout>
