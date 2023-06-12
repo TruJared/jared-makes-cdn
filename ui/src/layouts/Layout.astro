@@ -2,28 +2,137 @@
 export interface Props {
 	title: string;
 }
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer.astro";
 import { SEO } from "astro-seo";
+import Navigation from "../components/Navigation.astro";
+import Heading from "../components/Heading.astro";
 import navigation from "../data/navigation.json";
 
 const { title } = Astro.props;
+// TODO: add seo
 ---
 
-<!-- TODO: add seo --><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png+xml" href="/favicon.png" />
-		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<Navigation navigation={navigation} client:load />
-		<slot />
-		<Footer />
+		<Heading />
+		<div class="content--wrapper">
+			<slot />
+		</div>
+		<div class="navigation--wrapper">
+			<Navigation navigation={navigation} />
+		</div>
 	</body>
 </html>
+
+<style is:global>
+	:root {
+		--color-primary: #68dfff;
+		--color-secondary: #f68bd2;
+		--color-accent: #86cb92;
+		--color-accent-alt: #eac879;
+		--color-text: #e0dce1;
+		--color-link: #7b59d2;
+		--color-background: #191521;
+	}
+
+	/* normalize https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	* {
+		margin: 0;
+	}
+
+	body {
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
+		display: block;
+		max-width: 100%;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
+
+	#root,
+	#__next {
+		isolation: isolate;
+	}
+
+	html {
+		font-size: 62.5%;
+	}
+
+	html,
+	body {
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		color: var(--color-text);
+	}
+
+	body {
+		font-size: 1.6rem;
+		background-color: var(--color-background);
+	}
+</style>
+
+<style>
+	.content--wrapper {
+		position: absolute;
+		top: 33%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		max-width: 60rem;
+		padding: 0 2rem;
+		text-align: center;
+	}
+
+	.navigation--wrapper {
+		position: fixed;
+		bottom: 0;
+		z-index: 100;
+		width: 100%;
+		text-align: right;
+		padding: 2rem 2rem;
+	}
+</style>

@@ -1,0 +1,68 @@
+---
+---
+
+<h1 class="neon-glow">Jared Makes</h1>
+<style>
+
+
+  .neon-glow {
+    font-family: "Zeyada", cursive;
+    font-size: 8rem;
+    color: var(--color-text);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 2rem 4rem;
+    line-height: 1.2;
+    text-shadow: 0 0 20px var(--color-secondary),
+      0 0 25px var(--color-secondary),
+      0 0 35px var(--color-primary) 0 0 55px var(--color-primary),
+      0 0 65px var(--color-primary), 0 0 15px var(--color-primary),
+      0 0 20px var(--color-primary);
+    animation: title-glow 20s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  }
+
+  @keyframes title-glow {
+    0%,
+    100% {
+      color: var(--color-text);
+      text-shadow: 0 0 5px var(--color-tertiary), 0 0 10px var(--color-tertiary),
+        0 0 15px var(--color-primary), 0 0 10px var(--color-primary),
+        0 0 20px var(--color-primary), 0 0 20px var(--color-primary),
+        0 0 15px var(--color-primary);
+    }
+    20%,
+    80% {
+      color: var(--color-secondary);
+      text-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary),
+        0 0 15px var(--color-tertiary), 0 0 15px var(--color-tertiary),
+        0 0 25px var(--color-tertiary), 0 0 25px var(--color-tertiary),
+        0 0 20px var(--color-tertiary);
+    }
+    40%,
+    60% {
+      color: var(--color-primary);
+      text-shadow: 0 0 5px var(--color-tertiary), 0 0 10px var(--color-tertiary),
+        0 0 15px var(--color-primary), 0 0 10px var(--color-primary),
+        0 0 20px var(--color-primary), 0 0 20px var(--color-primary),
+        0 0 15px var(--color-primary);
+    }
+    50%,
+    90% {
+      color: var(--color-tertiary);
+      text-shadow: 0 0 20px var(--color-secondary),
+        0 0 25px var(--color-secondary), 0 0 35px var(--color-primary),
+        0 0 55px var(--color-primary), 0 0 65px var(--color-primary),
+        0 0 15px var(--color-primary), 0 0 20px var(--color-primary);
+    }
+    10%,
+    30%,
+    70% {
+      color: var(--color-secondary);
+      text-shadow: 0 0 13px var(--color-primary), 0 0 16px var(--color-primary),
+        0 0 15px var(--color-secondary), 0 0 15px var(--color-secondary),
+        0 0 16px var(--color-secondary), 0 0 30px var(--color-secondary),
+        0 0 12px var(--color-secondary);
+    }
+  }
+</style>

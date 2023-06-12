@@ -1,16 +1,44 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HomeHeader from '../components/HomeHeader.astro';
-import FeaturedProjects from '../components/FeaturedProjects.astro';
-import FeaturedBlogPosts from '../components/FeaturedBlogPosts.astro';
-import logos from "../data/logos.json";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Jared Makes">
 	<main>
-	<HomeHeader heading="Jared Makes" intro="MAccusantium lectus consectetuer pede aut tempus! Pulvinar nihil aut ipsa nam, mollis! Suspendisse dapibus? Volutpat iste! Integer suscipit placerat orci ducimus, doloribus facilis laoreet. Ipsam egestas! Asperiores similique tortor nascetur! Accusantium curabitur accusamus aliqua duis? Irure." logos={logos} />
-	<FeaturedProjects />
-	<FeaturedBlogPosts />
+		<div class="about">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab maiores,
+			veniam ad placeat voluptates corrupti odit porro natus perferendis!
+			Officiis modi aspernatur quibusdam magni, tenetur hic saepe voluptas
+			reprehenderit itaque.
+			<div class="about__image--wrapper">
+			<img src="/images/about.webp" alt="" srcset="" class="about__image--image">
+			</div>
 
+		</div>
 	</main>
 </Layout>
+
+<style>
+
+.about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.about__image--wrapper {
+	width: 100%;
+	max-width: 250px;
+}
+
+.about__image--image {
+	width: 100%;
+	border-radius: 25px;
+	padding: .25rem;
+	background-color: var(--color-accent-alt);
+	border: 2px solid var(--color-primary);
+	box-shadow: 0 0 10px 5px var(--color-text);
+	margin-top: 2.5rem;
+}
+
+</style>
